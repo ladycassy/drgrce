@@ -1,0 +1,81 @@
+{
+  "vpn": {
+    "enabled": false,
+    "clientType": "manual",
+    "command": "",
+    "connectionVerifyUrl": "https://www.google.com",
+    "ipTrackingEndpoint": "https://api.ipify.org?format=json",
+    "connectionVerifyTimeout": 5000,
+    "maxRetries": 10,
+    "retryDelay": 2000,
+    "changeAfterFailures": 5,
+    "rotationStrategy": "manual",
+    "rotationCount": 500,
+    "rotationIntervalMs": 3600000,
+    "serverList": []
+  },
+  "waitTimes": {
+    "scrollDelay": 1000,
+    "minVariance": 2000,
+    "maxVariance": 5000
+  },
+  "scraping": {
+    "concurrency": 3,
+    "maxConcurrency": 20,
+    "canvasConcurrency": 3,
+    "maxRetryRounds": 2,
+    "retryDelay": 5000,
+    "detectEmptyResults": true,
+    "orderedSequential": false,
+    "interTabDelayMin": 0,
+    "interTabDelayMax": 0,
+    "ensureTabActive": true,
+    "pageRecreationInterval": 5
+  },
+  "metadata": {
+    "metadataTimeout": 15000,
+    "cookieBannerSelector": ".cky-btn.cky-btn-accept"
+  },
+  "navigation": {
+    "timeout": 60000,
+    "waitUntil": "domcontentloaded",
+    "maxConcurrentJobs": 3
+  },
+  "smartframe": {
+    "extractFullImages": false,
+    "viewportMode": "thumbnail",
+    "headless": false,
+    "enableParallelCanvasExtraction": false,
+    "renderTimeout": 5000,
+    "initialRenderWaitMs": 2000,
+    "postResizeWaitMs": 1000,
+    "maxRenderWaitMs": 30000,
+    "tabActivationIntervalMs": 500,
+    "workerPoolSize": 2,
+    "jpgQuality": {
+      "thumbnail": 80,
+      "full": 95
+    },
+    "minValidFileSize": 51200,
+    "minValidDimensions": 500,
+    "viewportSizes": {
+      "full": {
+        "width": 9999,
+        "height": 9999
+      },
+      "thumbnail": {
+        "width": 600,
+        "height": 600
+      },
+      "large": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    "resizeSteps": {
+      "enabled": false,
+      "steps": ["thumbnail", "large", "full"],
+      "delayBetweenSteps": 2000
+    }
+  }
+}
